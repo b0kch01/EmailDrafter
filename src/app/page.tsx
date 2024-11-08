@@ -8,11 +8,15 @@ export default function Home() {
   const [yourName, setYourName] = useState("");
   const [contacts, setContacts] = useState("");
 
-  const contactObjects = contacts
-    .trim()
-    .split("\n")
-    .map((l) => l.split("\t"))
-    .map((l) => [l[0], l[2], l[4]]);
+  let contactObjects: string[][] = [];
+
+  if (contacts) {
+    contactObjects = contacts
+      .trim()
+      .split("\n")
+      .map((l) => l.split("\t"))
+      .map((l) => [l[0], l[2], l[4]]);
+  }
 
   return (
     <div className="p-8 flex flex-col gap-4">
