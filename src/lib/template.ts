@@ -14,7 +14,7 @@ export function generateColdContact(
   theirName = theirName.trim();
   theirEmail = theirEmail.trim();
   theirCompany = theirCompany.trim();
-  const subject = `Hack at UCI x ${theirCompany} 2024-2025`;
+  const subject = `Hack at UCI x ${theirCompany} Partnership 2024-2025`;
 
   const body = `Hello ${theirName},
 
